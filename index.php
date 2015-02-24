@@ -1,6 +1,9 @@
 <?php
+
+error_reporting(-1);
+header('Content-Type: text/html; charset=utf8');
 // include_once 'db.php';
-include_once 'regularexpressions.php'; // It is simle to chose another page
+include_once 'index5.php'; // It is simle to chose another page
 die();
 
 /* $query = 'SELECT `id`, `title`, `article`, `autor`, `date`

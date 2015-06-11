@@ -70,7 +70,6 @@ die();
         }
 
         pre {
-            word-break: break-word;
             color: #000;
             font-size: 12px;
             font-weight: bold;

@@ -3,7 +3,7 @@
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
 // include_once 'db.php';
-include_once 'test6.php'; // It is simle to chose another page
+include_once 'test/callback.php'; // It is simle to chose another page
 die();
 
 /* $query = 'SELECT `id`, `title`, `article`, `autor`, `date`
@@ -16,14 +16,14 @@ die();
     while($result = $query->fetch(PDO::FETCH_OBJ)){
         echo $result->id.' ';
         echo $result->title.'<br>';
-}*/
+}
 
     $query = '
         SELECT `cars`.`car`,`personal`.`name`,`personal`.`surname`
         FROM `personal`
         LEFT JOIN `cars`
         ON  `personal`.`cars_id` = `cars`.`id`
-    ';
+    ';*/
 
     $query = $pdo->query($query);
     $result = $query->fetchAll(PDO::FETCH_ASSOC);

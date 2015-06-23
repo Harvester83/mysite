@@ -30,6 +30,8 @@ die();
 
 <?php
 
+phpinfo();
+
 class GetArrayMetods
 {
     public function getMaxArrayValue($arr)
@@ -57,6 +59,8 @@ class GetArrayMetods
         }
         return $min;
     }
+
+
 
     public function getListArray($items)
     {

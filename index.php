@@ -3,7 +3,7 @@
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
 // include_once 'db.php';
-include_once 'test/construct.php'; // It is simle to chose another page
+include_once 'test/page2.php'; // It is simle to chose another page
 die();
 
 /* $query = 'SELECT `id`, `title`, `article`, `autor`, `date`

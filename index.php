@@ -1,10 +1,11 @@
 <?php
-
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
-// include_once 'db.php';
-include_once 'test/construct.php'; // It is simle to chose another page
+include_once 'db.php';
+include_once 'templates/test3.php'; // It is simle to chose another page
 die();
+include_once 'templates/pagination/index.php'; // It is simle to chose another page
+
 
 /* $query = 'SELECT `id`, `title`, `article`, `autor`, `date`
                   FROM `articles`

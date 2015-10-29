@@ -146,6 +146,7 @@ $years2 = array(
     <meta name="robots" content="index, follow">
     <meta name="rating" content="General">
     <meta name="copyright" content="Alternanive article">
+    <script src="templates/paralax/js/jquery.js"></script>
     <meta charset="utf-8">
     <style>
         .container {
@@ -172,69 +173,50 @@ $years2 = array(
 <body>
 <div class="container">
 
-    <h1><?php echo print_r($cars[1]); ?></h1>
-
-
-    <!-- select models cars drom array-->
-    <select id="car-brand">
-        <?php  foreach ($cars as $carsModel => $carModelValue) { ?>
-            <?php foreach ($carModelValue['model'] as $carsModelKey => $carsModel) { ?>
-                <option><?php print $carsModel; ?></option>
-            <?php }; ?>
-        <?php }; ?>
-    </select>
-
-     <!--select specific car models from array-->
-    <select id="car-brand">
-        <?php foreach ($cars[1] as $carModelKey => $carModelValue) { ?>
-            <option><?php print $carModelValue; ?></option>
-        <?php }; ?>
-    </select>
-
-    <select id="car-brand">
-        <?php foreach ($years2 as $yearkey => $yearValue) { ?>
-            <option><?php print $yearkey.' ------------ '.$yearValue; ?></option>
-        <?php }; ?>
-    </select>
-
-    <div class="input integer required auto_mileage">
-
-        <input   type="number">
-    </div>
-
-    <p>*********************************************************************************************</p>
-    <p>*********************************************************************************************</p>
-    <p>*********************************************************************************************</p>
-    <p>*********************************************************************************************</p>
-
-
+<!--
     <h5>
         <?php
-            echo "<pre>";
+/*            echo "<pre>";
                 print_r(($cars[1]));
             echo "</pre>";
-        ?>
+        */?>
     </h5>
 
-    <h5><?php print(($cars[1]['brand'])); ?></h5>
+    <h5><?php /*print(($cars[1]['brand'])); */?></h5>
 
     <div>
-        <?php $carIndificator = 5; ?>
+        <?php /*$carIndificator = 5; */?>
         <select id="car-brand">
-                <option><?php print(($cars[$carIndificator]['brand'])); ?></option>
+                <option><?php /*print(($cars[$carIndificator]['brand'])); */?></option>
         </select>
     </div>
 
     <!-- select models cars drom array-->
-    <div>
+    <!--<div>
         <select id="car-brand">
-            <?php  foreach ($cars[$carIndificator]['model'] as $models) { ?>
-                    <option><?php print $models; ?></option>
-                <?php }; ?>
+            <?php /*/* foreach ($cars[$carIndificator]['model'] as $models) { */?>
+                    <option><?php /*/*print $models; */?></option>
+                <?php /*}; */?>
         </select>
-    </div>
+    </div>-->
+
+    <p class="text">gelgkegpk</p>
+
+    <select id="car-brand">
+        <option value="1">ABM</option>
+        <option value="2">Acura</option>
+        <option value="3">Alfa Romeo</option>
+        <option value="4">Aston Martin</option>
+        <option value="5">Audi</option>
+    </select>
+
+
     <script>
 
+
+        $('#car-brand').click(function(){
+            console.log($(this).val());
+        });
 
     </script>
 

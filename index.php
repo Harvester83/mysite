@@ -29,7 +29,7 @@ include_once 'templates/pagination/index.php'; // It is simle to chose another p
     $query = $pdo->query($query);
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 <head>
     <title>PDO подключение и выборка с Data Object</title>

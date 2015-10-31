@@ -153,7 +153,7 @@ $years2 = array(
             width: 900px;
             margin: 0 auto;
         }
-        #car-brand {
+        #car-brand, #car-model {
             width: 300px;
             border: none;
             color: #000;
@@ -200,25 +200,89 @@ $years2 = array(
         </select>
     </div>-->
 
-    <p class="text">gelgkegpk</p>
-
-    <select id="car-brand">
-        <option value="1">ABM</option>
-        <option value="2">Acura</option>
-        <option value="3">Alfa Romeo</option>
-        <option value="4">Aston Martin</option>
-        <option value="5">Audi</option>
-    </select>
-
+    <h1 class="text">TEST DRIVE</h1>
 
     <script>
+        var autos = {
+            1: {
+                carBrand: 'ABM',
+                carModel: {
+                    1:'Volcan 150'
+                }
+            },
+
+            2: {
+                carBrand: 'Acura',
+                carModel: {
+                    1:'ILX',
+                    2:'MDX'
+                }
+            },
+
+            3: {
+                carBrand: 'Alfa Romeo',
+                carModel: {
+                    1: '156',
+                    2: '164'
+                }
+            },
+
+            4: {
+                carBrand: 'Aston Martin',
+                carModel: {
+                    1: 'DB9',
+                    2: 'DBS',
+                    3: 'Rapide'
+                }
+            },
+
+            5: {
+                carBrand: 'Audi',
+                carModel: {
+                    0: '100',
+                    1: 'A1',
+                    2: 'A3',
+                    3: 'A4',
+                    4: 'A5',
+                    5: 'A6',
+                    6: 'A7',
+                    7: 'A8'
+                }
+            }
+        };
+
+        $(document).ready(function(){
+
+            $('#car-brand option').eq(0).attr('selected', 'selected');
+            $('#car-brand').change(function(){
+                console.log($('#car-brand').val());
+                var num = ($(this).val())? $(this).val() : 1;
+                for (key in autos[num]['carModel']) {
+                    $('#car-model').append('<option value="'+ key +'">' + autos[num]['carModel'][key] + '</option>');
+                }
+            });
+
+            for (i in autos) {
+                $('#car-brand').append('<option value="'+ i +'">' + autos[i]['carBrand'] + '</option>');
+            }
 
 
-        $('#car-brand').click(function(){
-            console.log($(this).val());
+
+
+
         });
 
     </script>
+
+    <select id="car-brand"></select>
+
+    <select id="car-model"></select>
+
+    <button>
+        OK
+    </button>
+
+    <h1>ekrfgjoijgoifdjgoi</h1>
 
 
 </div>

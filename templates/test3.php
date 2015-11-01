@@ -150,12 +150,12 @@ $years2 = array(
     <meta charset="utf-8">
     <style>
         .container {
-            width: 1300px;
+            width: 800px;
             margin: 0 auto;
         }
 
-        #car-brand, #car-model, #test {
-            width: 300px;
+        #car-brand, #car-model, #selectbox {
+            width: 200px;
             border: none;
             color: #000;
             outline: 1px solid #000;
@@ -271,34 +271,52 @@ $years2 = array(
 
         $(document).ready(function () {
 
+
+
+/******************************************************************************************************************/
+
+
+$('#car-brand :last').attr("selected", "selected");
+
+
+/****************************************************************************************************************/
             for (i in autos) {
                 $('#car-brand').append('<option value="' + i + '">' + autos[i]['carBrand'] + '</option>');
             }
 
-            $('#car-brand option').eq(4).attr('selected', 'selected');
+            //$('#car-brand option').eq(4).attr('selected', 'selected');
 
-            $('#car-brand').on('click', function (){
-                console.log($(this).attr('selected', 'selected'));
+
+            //console.log($('select#car-brand').val());
+
+
+
+
+
+
+            $('#car-brand').on('change', function (){
+
+                console.log($(this).val());
+
+                var num = $(this).val();
+
+                for (key in autos[num]['carModel']) {
+                    $('#car-model').append('<option value="' + key + '">' + autos[num]['carModel'][key] + '</option>');
+                }
             });
 
 
-            var num = 5;
 
-            for (key in autos[num]['carModel']) {
-                //$('#car-model option').remove();
-                $('#car-model').append('<option value="' + key + '">' + autos[num]['carModel'][key] + '</option>');
-            }
         });
 
     </script>
-    <select id="test">
+
+    <select name="selectbox" id="selectbox">
         <option value="1">FIRST 1</option>
         <option value="2">SECOND 2</option>
         <option value="3">THIRD 3</option>
         <option value="4">FOURTH 4</option>
     </select>
-
-    <p class="mylist"></p>
 
     <select id="car-brand"></select>
 

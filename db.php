@@ -2,7 +2,7 @@
 
 $host = 'locolhost';
 $user = 'root';
-$pass = '12345';
+$pass = '';
 $db = 'db_ukraine';
 $charset = 'utf8';
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

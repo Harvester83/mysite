@@ -150,10 +150,11 @@ $years2 = array(
     <meta charset="utf-8">
     <style>
         .container {
-            width: 900px;
+            width: 1300px;
             margin: 0 auto;
         }
-        #car-brand, #car-model {
+
+        #car-brand, #car-model, #test {
             width: 300px;
             border: none;
             color: #000;
@@ -168,35 +169,52 @@ $years2 = array(
             padding: 0;
             margin: 0;
         }
+
+        button, .but {
+            display: block;
+            background: #0F0F0F;
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #0F0F0F;
+            color: #f4f4f4;
+            font-size: 17px;
+            cursor: pointer;
+            margiN: 100px 0 0 0;
+            border-raDius: 5px;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
 
-<!--
+    <!--
     <h5>
         <?php
-/*            echo "<pre>";
-                print_r(($cars[1]));
-            echo "</pre>";
-        */?>
+    /*            echo "<pre>";
+                    print_r(($cars[1]));
+                echo "</pre>";
+            */ ?>
     </h5>
 
-    <h5><?php /*print(($cars[1]['brand'])); */?></h5>
+    <h5><?php /*print(($cars[1]['brand'])); */ ?></h5>
 
     <div>
-        <?php /*$carIndificator = 5; */?>
+        <?php /*$carIndificator = 5; */ ?>
         <select id="car-brand">
-                <option><?php /*print(($cars[$carIndificator]['brand'])); */?></option>
+                <option><?php /*print(($cars[$carIndificator]['brand'])); */ ?></option>
         </select>
     </div>
 
     <!-- select models cars drom array-->
     <!--<div>
         <select id="car-brand">
-            <?php /*/* foreach ($cars[$carIndificator]['model'] as $models) { */?>
-                    <option><?php /*/*print $models; */?></option>
-                <?php /*}; */?>
+            <?php /*/* foreach ($cars[$carIndificator]['model'] as $models) { */ ?>
+                    <option><?php /*/*print $models; */ ?></option>
+                <?php /*}; */ ?>
         </select>
     </div>-->
 
@@ -207,15 +225,15 @@ $years2 = array(
             1: {
                 carBrand: 'ABM',
                 carModel: {
-                    1:'Volcan 150'
+                    1: 'Volcan 150'
                 }
             },
 
             2: {
                 carBrand: 'Acura',
                 carModel: {
-                    1:'ILX',
-                    2:'MDX'
+                    1: 'ILX',
+                    2: 'MDX'
                 }
             },
 
@@ -251,39 +269,59 @@ $years2 = array(
             }
         };
 
-        $(document).ready(function(){
-
-            $('#car-brand option').eq(0).attr('selected', 'selected');
-            $('#car-brand').change(function(){
-                console.log($('#car-brand').val());
-                var num = ($(this).val())? $(this).val() : 1;
-                for (key in autos[num]['carModel']) {
-                    $('#car-model').append('<option value="'+ key +'">' + autos[num]['carModel'][key] + '</option>');
-                }
-            });
+        $(document).ready(function () {
 
             for (i in autos) {
-                $('#car-brand').append('<option value="'+ i +'">' + autos[i]['carBrand'] + '</option>');
+                $('#car-brand').append('<option value="' + i + '">' + autos[i]['carBrand'] + '</option>');
             }
 
+            $('#car-brand option').eq(4).attr('selected', 'selected');
+
+            $('#car-brand').on('click', function (){
+                console.log($(this).attr('selected', 'selected'));
+            });
 
 
+            var num = 5;
 
-
+            for (key in autos[num]['carModel']) {
+                //$('#car-model option').remove();
+                $('#car-model').append('<option value="' + key + '">' + autos[num]['carModel'][key] + '</option>');
+            }
         });
 
     </script>
+    <select id="test">
+        <option value="1">FIRST 1</option>
+        <option value="2">SECOND 2</option>
+        <option value="3">THIRD 3</option>
+        <option value="4">FOURTH 4</option>
+    </select>
+
+    <p class="mylist"></p>
 
     <select id="car-brand"></select>
 
     <select id="car-model"></select>
 
-    <button>
-        OK
-    </button>
+    <button>OK</button>
 
-    <h1>ekrfgjoijgoifdjgoi</h1>
+    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</h2>
 
+    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</h2>
+
+
+    <a class="but" href="#">Нажми меня</a>
 
 </div>
 </body>

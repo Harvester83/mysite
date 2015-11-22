@@ -257,66 +257,39 @@ $years2 = array(
             5: {
                 carBrand: 'Audi',
                 carModel: {
-                    0: '100',
-                    1: 'A1',
-                    2: 'A3',
-                    3: 'A4',
-                    4: 'A5',
-                    5: 'A6',
-                    6: 'A7',
-                    7: 'A8'
+                    1: '100',
+                    2: 'A1',
+                    3: 'A3',
+                    4: 'A4',
+                    5: 'A5',
+                    6: 'A6',
+                    7: 'A7',
+                    8: 'A8'
                 }
             }
         };
 
         $(document).ready(function () {
 
-
-
-/******************************************************************************************************************/
-
-
-$('#car-brand :last').attr("selected", "selected");
-
-
-/****************************************************************************************************************/
             for (i in autos) {
-                $('#car-brand').append('<option value="' + i + '">' + autos[i]['carBrand'] + '</option>');
+                $('#car-brand').append('<option value="'+ i +'">' + autos[i]['carBrand'] + '</option>');
             }
 
-            //$('#car-brand option').eq(4).attr('selected', 'selected');
-
-
-            //console.log($('select#car-brand').val());
-
-
-
-
-
+            $('#car-model').append('<option class="car-param" value="' + 1 + '">' + autos[1]['carModel'][1] + '</option>');
 
             $('#car-brand').on('change', function (){
 
-                console.log($(this).val());
-
-                var num = $(this).val();
-
+                $('.car-param').remove();
+                var num = $(this, '.car-param').val();
                 for (key in autos[num]['carModel']) {
-                    $('#car-model').append('<option value="' + key + '">' + autos[num]['carModel'][key] + '</option>');
+                    $('#car-model').append('<option class="car-param" value="' + key + '" data="data-car-param">' + autos[num]['carModel'][key] + '</option>');
                 }
             });
-
-
 
         });
 
     </script>
 
-    <select name="selectbox" id="selectbox">
-        <option value="1">FIRST 1</option>
-        <option value="2">SECOND 2</option>
-        <option value="3">THIRD 3</option>
-        <option value="4">FOURTH 4</option>
-    </select>
 
     <select id="car-brand"></select>
 

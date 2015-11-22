@@ -1,17 +1,4 @@
 
-<p>
-    <?php
-
-
-
-
-        echo $data = file_get_contents('text.json');
-
-
-    ?>
-
-
-
-</p>
+<p><?php echo $data = file_get_contents('text.json');?></p>
 
 

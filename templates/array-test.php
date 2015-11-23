@@ -1,34 +1,4 @@
 <?php
-/*$stateAbbr = array(
-    'TX' => 'Texas',
-    'GA' => 'Georgia',
-    'SC' => 'Souch Carolina',
-    'FL' => 'Florida',
-    'NC' => 'North Carolina',
-);
-
-echo "<pre>";
-print_r($stateAbbr);
-echo "</pre>";
-
-echo $stateAbbr[1];
-
-die();
-*/
-
-?>
-<!--<style>
-    .list {
-        color: #328822;
-        font-weight: bold;
-        font-size: 15px;
-        border: 2px solid #328822;
-        width: 350px;
-    }
-</style>-->
-
-
-<?php
 
 class GetArrayMetods
 {
@@ -42,6 +12,7 @@ class GetArrayMetods
             }
             $i++;
         }
+
         return $max;
     }
 
@@ -55,12 +26,12 @@ class GetArrayMetods
             }
             $i++;
         }
+
         return $min;
     }
 
     public function getListArray($items)
-    {
-        ?>
+    {?>
         <ul>
             <?php foreach ($items as $item => $options) { ?>
                 <li><?php echo $item ?>
@@ -78,8 +49,7 @@ class GetArrayMetods
                 </li>
             <?php } ?>
         </ul>
-    <?php
-    }
+    <?php }
 }
 
 $numbers = array(10, 454, 2, 68);
@@ -154,11 +124,6 @@ $EuropeMainland = array(
 $getArrayMetods = new GetArrayMetods();
 $getArrayMetods->getListArray($EuropeMainland);
 
-
-
-
-
-?>
 
 
 

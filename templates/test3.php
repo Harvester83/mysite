@@ -311,7 +311,6 @@ $years2 = array(
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.</h2>
 
-
     <a class="but" href="#">Нажми меня</a>
 
 </div>

@@ -1,33 +1,21 @@
 <?php
+
+// Преобразовать проект в шаблон MVC
+
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
 include_once 'db.php';
-include_once 'templates/dbconnection-test.php'; // It is simle to chose another page
-die();
-include_once 'templates/pagination/index.php'; // It is simle to chose another page
+include_once 'templates/array-test.php';
+die;
 
-
-/* $query = 'SELECT `id`, `title`, `article`, `autor`, `date`
+$query = 'SELECT  `title`, `article`, `autor`, `date`
                   FROM `articles`
                   ORDER BY `date` DESC
-                ';
+          ';
 
-   $query = $pdo->query($query);
+$query = $pdo->query($query);
+$articles = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    while($result = $query->fetch(PDO::FETCH_OBJ)){
-        echo $result->id.' ';
-        echo $result->title.'<br>';
-}*/
-
-    $query = '
-        SELECT `cars`.`car`,`personal`.`name`,`personal`.`surname`
-        FROM `personal`
-        LEFT JOIN `cars`
-        ON  `personal`.`cars_id` = `cars`.`id`
-    ';
-
-    $query = $pdo->query($query);
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,100 +29,24 @@ include_once 'templates/pagination/index.php'; // It is simle to chose another p
     <meta name="rating" content="General">
     <meta name="copyright" content="Alternanive article">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="template/css/style.css">
-    <link rel="stylesheet" href="template/css/html5reset.css">
-    <script  src="template/js/html5.js"></script>
-    <script  src="template/js/main.js"></script>
-    <style>
-
-        body {
-            background: #f4f4f4;
-        }
-
-        .container {
-            width: 980px;
-            margin: 0 auto;
-        }
-
-        .box {
-            float: left;
-            border: 2px solid #000;
-            width: 230px;
-            height: 270px;
-            background: #dbdbdb;
-            margin: 20px;
-            font-weight: bold;
-            font-size: 13px;
-            color: #4c4c4c;
-            padding: 20px;
-            font-family: Tahoma;
-        }
-
-        pre {
-            word-break: break-word;
-            color: #000;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        p {
-            color: #040404;
-        }
-
-        .article {
-            background: #cbcbcb;
-            padding: 5px;
-        }
-
-        h2 {
-            margin: 5px; 0;
-            color: #296F3D;
-        }
-
-        .clearer {
-            clear: both;
-        }
-
-        .green {
-            min-width: 200px;
-            color:#000;
-            background: #3a9426;
-            padding: 20px;
-            font-size: 20px;
-            margin: 30px;
-            font-weight: 600;
-        }
-
-        table {
-            border: 1px solid #000;
-        }
-
-        td {
-            padding: 5px;
-            border: 1px solid #000;
-        }
-
-        th {
-            padding: 5px;
-            border: 1px solid #000;
-        }
-    </style>
-
-
+    <link rel="stylesheet" href="media/css/style.css">
+    <link rel="stylesheet" href="media/css/html5reset.css">
+    <script  src="media/js/html5.js"></script>
+    <script  src="media/js/main.js"></script>
 </head>
 <body>
     <div class="container">
-        <table>
+        <table cellpadding="10"  cellspacing="5">
                 <tr>
-                    <th>CAR</th>
-                    <th>NAME</th>
-                    <th>SURNAME</th>
+                    <th>Title</th>
+                    <th>Article</th>
+                    <th>Autor</th>
                 </tr>
-               <?php foreach($result as $item) {?>
+               <?php foreach($articles as $article) {?>
                    <tr>
-                       <td><?php echo $item['car'];?></td>
-                       <td><?php echo $item['name'];?></td>
-                       <td><?php echo $item['surname'];?></td>
+                       <td><?php echo $article['title'];?></td>
+                       <td><?php echo $article['article'];?></td>
+                       <td><?php echo $article['autor'];?></td>
                    </tr>
                 <?php }?>
         </table>

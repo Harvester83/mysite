@@ -5,7 +5,7 @@
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
 include_once 'db.php';
-include_once 'templates/array-test.php';
+include_once 'templates/timestamp-test.php';
 die;
 
 $query = 'SELECT  `title`, `article`, `autor`, `date`

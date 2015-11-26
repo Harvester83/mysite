@@ -313,6 +313,8 @@ $years2 = array(
 
     <a class="but" href="#">Нажми меня</a>
 
+    <p>Привет</p>
+
 </div>
 </body>
 </html>

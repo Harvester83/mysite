@@ -1,19 +1,20 @@
 <?php
 
 $timeStamp = 1448196317159;
+$dateTime = '24 Nov 2015';
 
-$date = date($timeStamp . ' = m/Y');
+$date = date($timeStamp . ' = d  M Y');
 
 echo $date;
+// echo $date->format('U = Y-m-d H:i:s') . '<br>';
+echo '<br>';
+echo '<br>';
+//echo strtotime("now").'<br>';
+echo strtotime("24 Nov 2015"). '<br>';
+echo '<p style="color: #f00">' . strtotime($dateTime). '</p>';
+/*echo strtotime("+1 day"). '<br>';
+echo strtotime("+1 week"). '<br>';
+echo strtotime("+1 week 2 days 4 hours 2 seconds"), '<br>';
+echo strtotime("next Thursday"). '<br>';
+echo strtotime("last Monday"). '<br>';*/
 
-echo '<br>';
-echo '<br>';
-echo '<br>';
-
-//echo(strtotime("now") . "<br>");
-echo(strtotime("30 October/2005") . "<br>");
-/*echo(strtotime("+5 hours") . "<br>");
-echo(strtotime("+1 week") . "<br>");
-echo(strtotime("+1 week 3 days 7 hours 5 seconds") . "<br>");
-echo(strtotime("next Monday") . "<br>");
-echo(strtotime("last Sunday"));*/

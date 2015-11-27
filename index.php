@@ -5,8 +5,6 @@
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
 include_once 'db.php';
-include_once 'templates/test-operator-while.php';
-die;
 
 $query = 'SELECT  `title`, `article`, `autor`, `date`
                   FROM `articles`
@@ -31,10 +29,16 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="utf-8">
     <link rel="stylesheet" href="media/css/style.css">
     <link rel="stylesheet" href="media/css/html5reset.css">
-    <script  src="media/js/html5.js"></script>
-    <script  src="media/js/main.js"></script>
+    <script  src="media/js/jquery.js"></script>
 </head>
 <body>
+    <?php
+    include_once 'templates/test-on-bind.php';
+    die;
+
+
+
+    ?>
     <div class="container">
         <table cellpadding="10"  cellspacing="5">
                 <tr>

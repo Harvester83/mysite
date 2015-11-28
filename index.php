@@ -5,8 +5,6 @@
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
 include_once 'db.php';
-include_once 'templates/test-operator-while.php';
-die;
 
 $query = 'SELECT  `title`, `article`, `autor`, `date`
                   FROM `articles`
@@ -35,7 +33,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <?php
-    include_once 'templates/test-on-bind.php';
+    include_once 'templates/serialize.php';
     die;
 
 

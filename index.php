@@ -33,7 +33,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <?php
-    include_once 'templates/serialize.php';
+    include_once 'templates/js.php';
     die;
 
 
@@ -55,5 +55,6 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
                 <?php }?>
         </table>
     </div>
+
 </body>
 </html>

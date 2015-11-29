@@ -1,28 +1,30 @@
 <?php
 
-$arr = array(41, 42, 43, 44, 45);
+$arr1 = array('/admin/uploads/2015/11/img-1.jpg', '/admin/uploads/2015/11/img-2.jpg');
 
-echo "<pre>";
-print_r($arr);
-echo "</pre>";
+$arr2 = array(83, 84);
 
-echo serialize($arr);
+$arr3 = array(85, 86);
 
+$arr4 = array(87, 88);
 
-$num = 34;
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
+$arr5 = array(89, 90);
 
 
-$serializeNum = serialize($num);
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+
+$serializeNum = serialize($arr1);
 
 echo $serializeNum;
+
 echo '<br>';
 echo '<br>';
 echo '<br>';
@@ -31,4 +33,9 @@ echo '<br>';
 echo '<br>';
 echo '<br>';
 echo '<br>';
-echo unserialize($serializeNum);
+
+$unser = unserialize($serializeNum);
+
+echo "<pre>";
+print_r($unser);
+echo "</pre>";

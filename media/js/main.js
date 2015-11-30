@@ -25,20 +25,32 @@ var myFish2 = ['angel', 'clown', 'mandarin', 'surgeon'];
 var removed1 = myFish1.splice(2, 0, 'drum');
 var removed2 = myFish2.splice(2, 3, 'drum');
 
-
 //console.log(myFish1);
 //console.log(myFish2);
-
 
 var obj = {
     propOne: 'One',
     propTwo: 'two'
 },
 
-
 prop;
 
-for(prop in obj) {
+for(prop in obj)
+{
     if(obj.hasOwnProperty(prop))
         console.log(prop + ': ' + obj[prop]);
 }
+
+var getSumNum = function (a, b)
+{
+    return a + b;
+};
+
+console.log('***************');
+console.log(getSumNum(56, 1));
+console.log('***************');
+var a = 12 / 3;
+var c = 3 * 4;
+console.log(getSumNum(a, c));
+
+console.log(typeof getSumNum);

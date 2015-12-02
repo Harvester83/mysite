@@ -1,0 +1,1 @@
+console.log(navigator.userAgent);console.log(navigator.platform);// получаем оект Екранconsole.log(screen.availWidth);console.log(location.toString());

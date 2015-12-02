@@ -32,6 +32,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
     <script  src="media/js/jquery.js"></script>
 </head>
 <body>
+<div class="container">
     <?php
     include_once 'templates/js.php';
     die;
@@ -39,6 +40,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
     ?>
+</div>
     <div class="container">
         <table cellpadding="10"  cellspacing="5">
                 <tr>

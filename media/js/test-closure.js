@@ -1,0 +1,1 @@
+var index = 8;var firstFunc = function() {    var index = 12;    return function() {        return index;    }};var secondFunc = function() {    var index = 23;    console.log(firstFunc()());};secondFunc();

@@ -1,1 +1,1 @@
-(function(){    console.log(12);    console.log(11);    console.log(10);    console.log(9);    console.log(8);    console.log(7);    console.log(6);    debugger;    console.log(5);    console.log(4);    console.log(3);})();
+//console.log(44);function pow( x, n) {    if(n == 1) {        return  y;    }    var result = x * pow(x, n - 1);    return result;}console.log(pow(2, 3));

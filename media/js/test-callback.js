@@ -41,3 +41,19 @@ console.log('******');
 console.log('******');
 
 document.write(navigator.userAgent);
+
+
+useCallback(5, callbackX);
+
+function useCallback(x, callback) {
+    console.log('Hello');
+    callback();
+}
+
+function callbackX() {
+    return 'This is the callbackX function';
+}
+
+function callbackY() {
+    return 'This is the callbackY function';
+}

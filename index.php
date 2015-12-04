@@ -34,10 +34,8 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <div class="container">
     <?php
-    include_once 'templates/js.php';
+    include_once 'templates/left-join-test.php';
     die;
-
-
 
     ?>
 </div>

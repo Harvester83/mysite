@@ -2,8 +2,8 @@
 
 $query = "
            SELECT *
-           FROM `nomenclature`, description
-           WHERE  `nomenclature`.`id` = `description`.`id`
+           FROM `nomenclature`
+           WHERE id IN (1, 4)
           ";
 
 

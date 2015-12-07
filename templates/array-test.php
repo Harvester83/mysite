@@ -54,7 +54,7 @@ class GetArrayMetods
 
 $numbers = array(10, 454, 2, 68);
 
-$EuropeMainland = array(
+$countriesMonument = array(
     'Германия' => array(
         'Берлин' => array(
             'Бранденбургские ворота',
@@ -120,6 +120,18 @@ $EuropeMainland = array(
         ),
     ),
 );
+
+foreach($countriesMonument as $countries => $CityMonuments) {
+    foreach($CityMonuments as $cyties => $monuments) {
+        foreach($monuments as $id => $monument) {
+           echo $monument.'<br>';
+        }
+    }
+}
+
+//var_dump($monument);
+die;
+
 
 $getArrayMetods = new GetArrayMetods();
 $getArrayMetods->getListArray($EuropeMainland);

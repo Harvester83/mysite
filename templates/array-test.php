@@ -129,6 +129,8 @@ foreach($countriesMonument as $countries => $CityMonuments) {
     }
 }
 
+print 5;
+
 //var_dump($monument);
 die;
 

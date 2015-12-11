@@ -60,4 +60,4 @@
     </tbody>
 </table>
 
-<script src="media/js/test-delegation.js"></script>
+<script src="media/js/test-inArray.js"></script>

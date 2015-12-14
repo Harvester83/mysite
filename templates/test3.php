@@ -189,6 +189,8 @@ $years2 = array(
     </style>
 </head>
 <body>
+
+
 <div class="container">
 
     <!--
@@ -303,6 +305,11 @@ $years2 = array(
         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.</h2>
+
+    <h2 style="margin-top: 20px; font-size: 30px; color: #000">
+        <?php print (int)((0.1 + 0.7) * 10 ); ?>
+    </h2>
+
     <a class="but" href="#">Нажми меня</a>
 
 </div>

@@ -1,0 +1,1 @@
+<?php $a = 12; $b = 18; $c = $a + $b; if (!$c) {    return false; } print 'Ответ положительный (TRUE)';

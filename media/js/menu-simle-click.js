@@ -1,0 +1,1 @@
+$(document).ready(function() {    $('.list li a').on('click', function() {       // console.log(5);        $('.list li a').removeClass('active-item');        $(this).toggleClass('active-item');    });});

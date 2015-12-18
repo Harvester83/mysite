@@ -60,4 +60,11 @@
     </tbody>
 </table>
 
-<script src="media/js/test-inArray.js"></script>
+<ul class="list">
+    <li><a href="#">ITEM 1</a></li>
+    <li><a href="#">ITEM 2</a></li>
+    <li><a href="#">ITEM 3</a></li>
+    <li><a href="#">ITEM 4</a></li>
+    <li><a href="#">ITEM 5</a></li>
+</ul>
+<script src="media/js/menu-simle-click.js"></script>

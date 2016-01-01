@@ -67,4 +67,4 @@
     <li><a href="#">ITEM 4</a></li>
     <li><a href="#">ITEM 5</a></li>
 </ul>
-<script src="media/js/menu-simle-click.js"></script>
+<script src="media/js/test.js"></script>

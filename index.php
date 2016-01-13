@@ -7,8 +7,8 @@ header('Content-Type: text/html; charset=utf8');
 include_once 'db.php';
 
 $query = 'SELECT  `title`, `article`, `autor`, `date`
-                  FROM `articles`
-                  ORDER BY `date` DESC
+          FROM `articles`
+          ORDER BY `date` DESC
           ';
 
 $query = $pdo->query($query);
@@ -34,7 +34,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <div class="container">
     <?php
-    include_once 'templates/js.php';
+    include_once 'templates/helloworld.php';
     die;
 
     ?>

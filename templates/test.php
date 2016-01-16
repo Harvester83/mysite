@@ -8,5 +8,6 @@ class Foo
 }
 
 echo Foo::aStaticMethod();
+
 //$classname = 'Foo';
-//$classname::aStaticMethod(); // ????dd??? ? PHP 5.3.0
+//$classname::aStaticMethod(); / ????dd??? ? PHP 5.3.0

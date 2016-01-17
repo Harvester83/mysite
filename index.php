@@ -34,7 +34,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <div class="container">
     <?php
-    include_once 'templates/OtherClass.php';
+    include_once 'templates/test.php';
     die;
 
     ?>

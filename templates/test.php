@@ -1,13 +1,17 @@
 <?php
-class Foo
-{
-    public static function aStaticMethod()
-    {
-        return 45;
+class AbraCatabra {
+    public static function who() {
+        echo __CLASS__;
+    }
+    public static function test() {
+        self::who();
     }
 }
 
-echo Foo::aStaticMethod();
+class B extends A {
+    public static function who() {
+        echo __CLASS__;
+    }
+}
 
-//$classname = 'Foo';
-//$classname::aStaticMethod(); / ????dd??? ? PHP 5.3.0
+B::test();

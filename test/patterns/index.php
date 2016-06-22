@@ -1,0 +1,1 @@
+<?phpinclude_once 'Duck.php';include_once 'MallardDuck.php';include_once 'RedheadDuck.php';$newDuck = new MallardDuck();echo $newDuck->fly();

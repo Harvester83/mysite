@@ -1,0 +1,1 @@
+<?phpabstract class Duck{    public function swim()    {        return 'Swim';    }    public function quack()    {        return 'Quack quack';    }    abstract protected function display();    public function fly()    {        return 'Fly';    }}

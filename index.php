@@ -4,7 +4,7 @@
 
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf8');
-include_once 'db.php';
+/*include_once 'db.php';
 
 $query = 'SELECT  `title`, `article`, `autor`, `date`
           FROM `articles`
@@ -12,7 +12,7 @@ $query = 'SELECT  `title`, `article`, `autor`, `date`
           ';
 
 $query = $pdo->query($query);
-$articles = $query->fetchAll(PDO::FETCH_ASSOC);
+$articles = $query->fetchAll(PDO::FETCH_ASSOC);*/
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <div class="container">
     <?php
-    include_once 'templates/abstract.php';
+    include_once 'test/patterns/index.php';
     die;
 
     ?>

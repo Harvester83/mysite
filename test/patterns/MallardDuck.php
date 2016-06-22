@@ -1,0 +1,1 @@
+<?phpclass MallardDuck extends Duck{    public function display()    {        return 'Duck MallardDuck';    }}
